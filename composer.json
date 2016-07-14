@@ -1,0 +1,24 @@
+{
+    "name": "jstoone/solid-slugger",
+    "description": "A solid little slugging library for PHP.",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Jakob Steinn",
+            "email": "jstoone@drk.sh"
+        }
+    ],
+    "require": {
+        "tightenco/collect": "^5.2"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^3.1",
+        "phpunit/phpunit": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "JakobSteinn\\SolidSlugger\\": "src/"
+        }
+    }
+}
