@@ -1,6 +1,6 @@
 <?php
 
-namespace JakobSteinn\SolidSlugger;
+namespace JakobSteinn\Slugger;
 
 /**
  * @author      Jakob Steinn <jstoone@drk.sh>

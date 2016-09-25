@@ -1,5 +1,5 @@
 <?php
-use JakobSteinn\SolidSlugger\Slugger;
+use JakobSteinn\Slugger\Slugger;
 
 class SluggerTest extends PHPUnit_Framework_TestCase {
 
@@ -9,8 +9,6 @@ class SluggerTest extends PHPUnit_Framework_TestCase {
         $slugger = new Slugger();
 
         $this->assertEquals('Q', $slugger->encode(42));
-
-
     }
 
     /** @test */

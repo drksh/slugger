@@ -1,6 +1,6 @@
 {
-    "name": "jstoone/solid-slugger",
-    "description": "A solid little slugging library for PHP.",
+    "name": "jstoone/slugger",
+    "description": "A PHP library for creating incremental slugs.",
     "license": "MIT",
     "minimum-stability": "stable",
     "authors": [
@@ -10,7 +10,6 @@
         }
     ],
     "require": {
-        "tightenco/collect": "^5.2"
     },
     "require-dev": {
         "symfony/var-dumper": "^3.1",
@@ -18,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "JakobSteinn\\SolidSlugger\\": "src/"
+            "JakobSteinn\\Slugger\\": "src/"
         }
     }
 }
