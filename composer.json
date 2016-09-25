@@ -1,6 +1,6 @@
 {
     "name": "jstoone/slugger",
-    "description": "A PHP library for creating incremental slugs.",
+    "description": "A simple class for creating incremental slugs.",
     "license": "MIT",
     "minimum-stability": "stable",
     "authors": [
@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "php": "^7.0|^7.1"
     },
     "require-dev": {
         "symfony/var-dumper": "^3.1",
