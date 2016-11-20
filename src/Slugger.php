@@ -1,12 +1,12 @@
 <?php
 
-namespace JakobSteinn\Slugger;
+namespace Darkshare\IncrementalSlugger;
 
 /**
  * A simple class for creating incremental slugs.
  *
  * @author      Jakob Steinn <jstoone@drk.sh>
- * @source      https://github.com/jstoone/slugger
+ * @source      https://github.com/drksh/incremental-slugger
  * @license     MIT
  */
 class Slugger {

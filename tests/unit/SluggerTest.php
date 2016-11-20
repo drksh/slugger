@@ -1,12 +1,13 @@
 <?php
-use JakobSteinn\Slugger\Slugger;
+
+use Darkshare\IncrementalSlugger\Slugger;
 
 class SluggerTest extends PHPUnit_Framework_TestCase {
 
     /**
      * The Slugger instance under test.
      *
-     * @var JakobSteinn\Slugger\Slugger
+     * @var Darkshare\IncrementalSlugger\Slugger
      */
     protected $slugger;
 

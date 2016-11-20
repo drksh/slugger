@@ -10,21 +10,19 @@ Let's say you have your own little URL-shortener, and each of the user submitted
 
 ## Usage
 ```php
-$slugger = new \JakobSteinn\SolidSlugger\Slugger();
+$slugger = new Darkshare\IncrementalSlugger\Slugger();
 
 // encode id's
-$slugger->short->encode(1); // a
-$slugger->short->encode(81259151); // fUcod
+$slugger->encode(1); // a
+$slugger->encode(81259151); // fUcod
 
 // decode id's
-$slugger->short->decode('a'); // 1
-$slugger->short->decode('fUcod'); // 81259151
+$slugger->decode('a'); // 1
+$slugger->decode('fUcod'); // 81259151
 ```
 
 # To-Can-Maybe-Do:
 - [ ] Config: Encode/decode starting from id 0 or 1
-- [ ] Config: Make characters swappable
-- [ ] Config: Character count offset
 - [ ] Internal: Make slugger able to have multiple implementations
   - [ ] Short-style e.g. `gUcod`
   - [ ] Blog-style e.g. `thirteen-years-of-blogging`

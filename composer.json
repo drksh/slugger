@@ -1,6 +1,6 @@
 {
-    "name": "jstoone/slugger",
-    "description": "A simple class for creating incremental slugs.",
+    "name": "drksh/incremental-slugger",
+    "description": "The slugging library used by Darkshare to create incremental slugs.",
     "license": "MIT",
     "minimum-stability": "stable",
     "authors": [
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "JakobSteinn\\Slugger\\": "src/"
+            "Darkshare\\IncrementalSlugger\\": "src/"
         }
     }
 }
