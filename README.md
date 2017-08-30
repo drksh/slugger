@@ -10,7 +10,7 @@ Let's say you have your own little URL-shortener, and each of the user submitted
 
 ## Usage
 ```php
-$slugger = new Darkshare\IncrementalSlugger\Slugger();
+$slugger = new Darkshare\Slugger();
 
 // encode id's
 $slugger->encode(1); // a

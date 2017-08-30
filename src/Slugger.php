@@ -1,6 +1,6 @@
 <?php
 
-namespace Darkshare\IncrementalSlugger;
+namespace Darkshare;
 
 /**
  * A simple class for creating incremental slugs.
