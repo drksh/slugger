@@ -1,8 +1,9 @@
 <?php
 
 use Darkshare\Slugger;
+use PHPUnit\Framework\TestCase;
 
-class SluggerTest extends PHPUnit_Framework_TestCase {
+class SluggerTest extends TestCase {
 
     /**
      * The Slugger instance under test.
