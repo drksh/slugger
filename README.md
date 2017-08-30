@@ -10,7 +10,7 @@ Let's say you have your own little URL-shortener, and each of the user submitted
 
 ## Usage
 ```php
-$slugger = new Darkshare\IncrementalSlugger\Slugger();
+$slugger = new Darkshare\Slugger();
 
 // encode id's
 $slugger->encode(1); // a
@@ -21,8 +21,3 @@ $slugger->decode('a'); // 1
 $slugger->decode('fUcod'); // 81259151
 ```
 
-# To-Can-Maybe-Do:
-- [ ] Config: Encode/decode starting from id 0 or 1
-- [ ] Internal: Make slugger able to have multiple implementations
-  - [ ] Short-style e.g. `gUcod`
-  - [ ] Blog-style e.g. `thirteen-years-of-blogging`
