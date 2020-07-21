@@ -1,8 +1,7 @@
 {
-    "name": "drksh/incremental-slugger",
+    "name": "drksh/slugger",
     "description": "The slugging library used by Darkshare to create incremental slugs.",
     "license": "MIT",
-    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Jakob Steinn",
@@ -10,15 +9,19 @@
         }
     ],
     "require": {
-        "php": "^7.0|^7.1"
+        "php": "^7.2.5"
     },
     "require-dev": {
-        "symfony/var-dumper": "^3.1",
-        "phpunit/phpunit": "~6.0"
+        "nunomaduro/collision": "^5.0",
+        "phpunit/phpunit": "^9.2",
+        "pestphp/pest": "^0.2.3",
+        "phpstan/phpstan": "^0.12.33"
     },
     "autoload": {
         "psr-4": {
             "Darkshare\\": "src/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
