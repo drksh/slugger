@@ -10,14 +10,12 @@ Let's say you have your own little URL-shortener, and each of the user submitted
 
 ## Usage
 ```php
-$slugger = new Darkshare\Slugger();
+// Transform ID's to slugs.
+Darkshare\Slugger::encode(1); // a
+Darkshare\Slugger::encode(81259151); // fUcod
 
-// encode id's
-$slugger->encode(1); // a
-$slugger->encode(81259151); // fUcod
-
-// decode id's
-$slugger->decode('a'); // 1
-$slugger->decode('fUcod'); // 81259151
+// Transform slugs to IDs.
+Darkshare\Slugger::decode('a'); // 1
+Darkshare\Slugger::decode('fUcod'); // 81259151
 ```
 
