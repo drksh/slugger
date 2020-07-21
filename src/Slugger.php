@@ -12,11 +12,11 @@ namespace Darkshare;
 class Slugger
 {
     /**
-     * The available URI-safe symbols.
+     * Sorted list of all 71 available URI-safe characters.
      *
      * @var string[]
      */
-    protected $characters = [
+    private const CHARACTERS = [
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
         'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 
@@ -29,19 +29,11 @@ class Slugger
     ];
 
     /**
-     * The zero-based radix.
+     * A radix derived from available slug characters.
      *
      * @var int
      */
-    protected $incrementalBase;
-
-    /**
-     * Create a new Slugger.
-     */
-    public function __construct()
-    {
-        $this->incrementalBase = count($this->characters);
-    }
+    private const RADIX = 71;
 
     /**
      * Encode a given integer to a short slug.
@@ -49,7 +41,7 @@ class Slugger
      * @param   int     $value
      * @return  string
      */
-    public function encode(int $value): string
+    public static function encode(int $value): string
     {
         $result = '';
 
@@ -60,33 +52,33 @@ class Slugger
         }
 
         if ($value == 1) {
-            return $this->characters[0];
+            return static::CHARACTERS[0];
         }
 
         $value -= 1;
 
         while ($value > 0) {
-            $result .= $this->characters[$value % $this->incrementalBase];
+            $result .= static::CHARACTERS[$value % static::RADIX];
 
-            $value = floor($value / $this->incrementalBase);
+            $value = floor($value / static::RADIX);
         }
 
         return $result;
     }
 
     /**
-     * Decode a incremental slug.
+     * Decode an incremental slug.
      *
      * @param   string  $value
      * @return  int
      */
-    public function decode(string $value): int
+    public static function decode(string $value): int
     {
         $valueLength = strlen($value);
         $result = 1;
 
         if ($valueLength == 1) {
-            $result += array_search($value, $this->characters, true);
+            $result += array_search($value, static::CHARACTERS, true);
 
             return $result;
         }
@@ -96,9 +88,9 @@ class Slugger
             // It has proven to be faster to start with highest value first
             $currentCharacter = $value[$valueLength - $currentCharacterIndex - 1];
 
-            $currentCharacterValue = array_search($currentCharacter, $this->characters, true);
+            $currentCharacterValue = array_search($currentCharacter, static::CHARACTERS, true);
 
-            $characterResult = pow($this->incrementalBase, $valueLength - 1 - $currentCharacterIndex) * $currentCharacterValue;
+            $characterResult = pow(static::RADIX, $valueLength - 1 - $currentCharacterIndex) * $currentCharacterValue;
 
             $result += $characterResult;
         }
