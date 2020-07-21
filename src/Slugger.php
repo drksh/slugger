@@ -9,10 +9,10 @@ namespace Darkshare;
  * @source      https://github.com/drksh/incremental-slugger
  * @license     MIT
  */
-class Slugger {
-
+class Slugger
+{
     /**
-     * The available URI-safe symbols
+     * The available URI-safe symbols.
      *
      * @var string[]
      */
@@ -38,7 +38,8 @@ class Slugger {
     /**
      * Create a new Slugger.
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->incrementalBase = count($this->characters);
     }
 
@@ -48,22 +49,23 @@ class Slugger {
      * @param   int     $value
      * @return  string
      */
-    public function encode(int $value): string {
+    public function encode(int $value): string
+    {
         $result = '';
 
-        if($value < 1) {
+        if ($value < 1) {
             throw new \InvalidArgumentException(
                 'The given value has to be greater than zero. '.$value.' given.'
             );
         }
 
-        if($value == 1) {
+        if ($value == 1) {
             return $this->characters[0];
         }
 
         $value -= 1;
 
-        while($value > 0) {
+        while ($value > 0) {
             $result .= $this->characters[$value % $this->incrementalBase];
 
             $value = floor($value / $this->incrementalBase);
@@ -78,17 +80,18 @@ class Slugger {
      * @param   string  $value
      * @return  int
      */
-    public function decode(string $value): int {
+    public function decode(string $value): int
+    {
         $valueLength = strlen($value);
         $result = 1;
 
-        if($valueLength == 1) {
+        if ($valueLength == 1) {
             $result += array_search($value, $this->characters, true);
 
             return $result;
         }
 
-        for($currentCharacterIndex = 0; $currentCharacterIndex < $valueLength; $currentCharacterIndex++) {
+        for ($currentCharacterIndex = 0; $currentCharacterIndex < $valueLength; $currentCharacterIndex++) {
 
             // It has proven to be faster to start with highest value first
             $currentCharacter = $value[$valueLength - $currentCharacterIndex - 1];
@@ -103,4 +106,3 @@ class Slugger {
         return $result;
     }
 }
-
