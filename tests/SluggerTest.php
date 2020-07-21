@@ -2,6 +2,7 @@
 
 use Darkshare\Slugger;
 
+// Encoding
 it('can encode integers to incremental slugs')
     ->assertSame('Z', Slugger::encode(52));
 
@@ -15,6 +16,7 @@ it('throws exception when encoding a value lower than one',
     fn () => Slugger::encode(-1)
 )->throws(InvalidArgumentException::class);
 
+// Decoding
 it('can decode incremental slugs')
     ->assertSame(52, Slugger::decode('Z'));
 
