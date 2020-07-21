@@ -2,13 +2,6 @@
 
 use Darkshare\Slugger;
 
-/**
- * The Slugger instance under test.
- *
- * @var Darkshare\Slugger
- */
-$slugger = new Slugger();
-
 it('can encode integers to incremental slugs')
     ->assertSame('Z', Slugger::encode(52));
 
