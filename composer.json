@@ -1,5 +1,5 @@
 {
-    "name": "drksh/incremental-slugger",
+    "name": "drksh/slugger",
     "description": "The slugging library used by Darkshare to create incremental slugs.",
     "license": "MIT",
     "minimum-stability": "stable",
