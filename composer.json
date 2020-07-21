@@ -13,9 +13,9 @@
     },
     "require-dev": {
         "nunomaduro/collision": "^5.0",
-        "nunomaduro/larastan": "^0.6.1",
         "phpunit/phpunit": "^9.2",
-        "pestphp/pest": "^0.2.3"
+        "pestphp/pest": "^0.2.3",
+        "phpstan/phpstan": "^0.12.33"
     },
     "autoload": {
         "psr-4": {
