@@ -11,9 +11,6 @@ it('can encode large numbers resulting in longer slugs')
 it('starts at one when encoding')
     ->assertSame('a', Slugger::encode(1));
 
-it('can encode using a static method')
-    ->assertSame('a', Slugger::encode(1));
-
 it('throws exception when encoding a value lower than one',
     fn () => Slugger::encode(-1)
 )->throws(InvalidArgumentException::class);
